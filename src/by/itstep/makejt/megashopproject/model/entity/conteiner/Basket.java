@@ -2,6 +2,7 @@ package by.itstep.makejt.megashopproject.model.entity.conteiner;
 
 import by.itstep.makejt.megashopproject.model.entity.Milk;
 import by.itstep.makejt.megashopproject.model.entity.Orange;
+import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.util.Arrays;
 
@@ -123,5 +124,25 @@ public class Basket {
 
 
     }
+
+    public int getCountOfOrange(){
+        return oranges.length;
+    }
+
+    public int getCountOfMilk(){
+        return milks.length;
+    }
+
+    public Orange getOrange (int index){
+        return oranges[index];
+    }
+
+
+    public Milk getMilk (int index){
+        return milks[index];
+    }
+
+
+
 
 }
