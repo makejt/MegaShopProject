@@ -5,8 +5,6 @@ import by.itstep.makejt.megashopproject.model.entity.Orange;
 import by.itstep.makejt.megashopproject.model.entity.conteiner.Basket;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 public class ShopAssistanceTest {
@@ -28,9 +26,9 @@ public class ShopAssistanceTest {
         double expected = 10.5;
         double actual = ShopAssistance.calculateTotalPrice(basket);
         assertEquals(expected, actual, 0.1);
-
-
-
     }
+
+
+
 
 }

@@ -1,18 +1,19 @@
 package by.itstep.makejt.megashopproject.model.entity.conteiner;
 
-public class Bread {
+import by.itstep.makejt.megashopproject.model.entity.abstracts.Product;
+
+public class Bread extends Product {
     private String colour;
     private String flour;
-    private double price;
 
-    Bread (){
+    Bread() {
 
     }
 
     public Bread(String colour, String flour, double price) {
+        super(price);
         this.colour = colour;
         this.flour = flour;
-        this.price = price;
     }
 
     public String getColour() {
@@ -31,26 +32,12 @@ public class Bread {
         this.flour = flour;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
 
     @Override
     public String toString() {
         return "Bread{" +
-                "colour='" + colour + '\'' +
-                ", flour='" + flour + '\'' +
-                ", price=" + price +
-                '}';
+                "colour='" + colour +
+                ", flour='" + flour + ", " + super.toString() + "}";
     }
-
-
-
-
-
 
 }
