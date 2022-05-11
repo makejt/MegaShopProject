@@ -61,6 +61,13 @@ public class Basket {
         }
     }
 
+    public void setProducts (int index, Product product){
+        products[index] = product;
+    }
+
+
+
+
     public int getCountOfProduct() {
         return products.length;
     }
