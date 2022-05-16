@@ -2,23 +2,21 @@ package by.itstep.makejt.megashopproject.model.entity.conteiner;
 
 import by.itstep.makejt.megashopproject.model.entity.abstracts.Product;
 
-public class Basket {
+public class DynamicBasket {
 
     private Product[] products;
 
-
-    public Basket() {
+    public DynamicBasket() {
         products = new Product[0];
     }
 
-    public Basket(Product[] products) {
+    public DynamicBasket(Product[] products) {
         this();
         if (products == null) {
             products = new Product[0];
         }
         this.products = products;
     }
-
 
     @Override
     public String toString() {
@@ -49,7 +47,6 @@ public class Basket {
         products = temp;
     }
 
-
     public void removeProduct(int index) {
         Product[] temp = new Product[products.length + 1];
         for (int i = 0, j = 0; i < products.length; i++) {
@@ -64,9 +61,6 @@ public class Basket {
     public void setProducts (int index, Product product){
         products[index] = product;
     }
-
-
-
 
     public int getCountOfProduct() {
         return products.length;

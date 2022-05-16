@@ -2,7 +2,7 @@ package by.itstep.makejt.megashopproject.model.logic;
 
 import by.itstep.makejt.megashopproject.model.entity.Milk;
 import by.itstep.makejt.megashopproject.model.entity.Orange;
-import by.itstep.makejt.megashopproject.model.entity.conteiner.Basket;
+import by.itstep.makejt.megashopproject.model.entity.conteiner.DynamicBasket;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -17,7 +17,7 @@ public class ShopAssistanceTest {
         Milk milk2 = new Milk(1000, 3.5, 2);
         Milk milk3 = new Milk(1000, 3.5, 2);
 
-        Basket basket = new Basket();
+        DynamicBasket basket = new DynamicBasket();
         basket.add(orange);
         basket.add(milk1);
         basket.add(milk2);
