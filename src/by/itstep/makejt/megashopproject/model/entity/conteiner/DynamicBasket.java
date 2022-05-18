@@ -2,7 +2,7 @@ package by.itstep.makejt.megashopproject.model.entity.conteiner;
 
 import by.itstep.makejt.megashopproject.model.entity.abstracts.Product;
 
-public class DynamicBasket {
+public class DynamicBasket implements Basket{
 
     private Product[] products;
 
@@ -63,11 +63,11 @@ public class DynamicBasket {
         products[index] = product;
     }
 
-    public int getCountOfProduct() {
+    public int size() {
         return products.length;
     }
 
-    public Product getProduct(int index) {
+    public Product get(int index) {
         return products[index];
     }
 }

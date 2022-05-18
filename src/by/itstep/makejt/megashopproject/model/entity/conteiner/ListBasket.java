@@ -32,6 +32,23 @@ public class ListBasket {
         size++;
     }
 
+    public Product get (int index) {
+        if (isEmpty() || index < 0 || index >= size){
+            return null;
+        }
+
+        Node temp = first;
+
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+
+        }
+        return temp.product;
+
+
+    }
+
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();

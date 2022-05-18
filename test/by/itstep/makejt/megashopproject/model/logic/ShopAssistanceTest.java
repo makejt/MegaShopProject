@@ -3,8 +3,9 @@ package by.itstep.makejt.megashopproject.model.logic;
 import by.itstep.makejt.megashopproject.model.entity.Milk;
 import by.itstep.makejt.megashopproject.model.entity.Orange;
 import by.itstep.makejt.megashopproject.model.entity.conteiner.DynamicBasket;
+import by.itstep.makejt.megashopproject.model.entity.iteratorpattern.DynamicBasketIterator;
+import by.itstep.makejt.megashopproject.model.entity.iteratorpattern.MyIterator;
 import org.junit.Test;
-
 import static org.junit.Assert.*;
 
 public class ShopAssistanceTest {
@@ -23,12 +24,11 @@ public class ShopAssistanceTest {
         basket.add(milk2);
         basket.add(milk3);
 
+        MyIterator iterator = new DynamicBasketIterator(basket);
+
         double expected = 10.5;
-        double actual = ShopAssistance.calculateTotalPrice(basket);
+        double actual = ShopAssistance.calculateTotalPrice(iterator);
         assertEquals(expected, actual, 0.1);
     }
-
-
-
 
 }

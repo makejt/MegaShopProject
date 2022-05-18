@@ -2,28 +2,28 @@ package by.itstep.makejt.megashopproject.model.entity.conteiner;
 
 import by.itstep.makejt.megashopproject.model.entity.abstracts.Product;
 
-public class StaticBasket {
+public class FixedBasket implements Basket{
 
     public static final int DEFAULTSIZE = 10;
     private int size;
     private Product[] array;
 
-    public StaticBasket() {
+    public FixedBasket() {
         array = new Product[DEFAULTSIZE];
         size = 0;
     }
 
-    public StaticBasket(int capacity) {
+    public FixedBasket(int capacity) {
         array = new Product[capacity];
         size = 0;
     }
 
-    public StaticBasket(Product[] array) {
+    public FixedBasket(Product[] array) {
         this.array = array;
         size = array.length;
     }
 
-    public Product getProduct(int index) {
+    public Product get(int index) {
         return array[index];
     }
 
